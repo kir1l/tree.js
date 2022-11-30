@@ -1,0 +1,61 @@
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="index.css">
+   <script src="index.js" defer></script>
+   <title>demo</title>
+</head>
+
+<body>
+   <div class="my-tree">
+      <div class="folder" data-name="src">
+         <div class="file" data-name="index.js">
+            console.log('Hello World!')
+         </div>
+         <div class="file" data-name="index.html">
+            something here
+         </div>
+         <div class="folder" data-name="fonts">
+            <div class="folder" data-name="Montserrat">
+               <div class="file" data-name="Montserrat-ExtraLight.woff2"></div>
+               <div class="file" data-name="Montserrat-Light.woff2"></div>
+               <div class="file" data-name="Montserrat-Regular.woff2"></div>
+               <div class="file" data-name="Montserrat-Medium.woff2"></div>
+               <div class="file" data-name="Montserrat-Bold.woff2"></div>
+            </div>
+         </div>
+         <div class="folder" data-name="images">
+            <div class="folder" data-name="empty folder"></div>
+         </div>
+      </div>
+      <div class="file" data-name="doubleClick.me">
+         .file {
+         display: flex;
+         align-items: center;
+         padding-left: 17px;
+         padding-bottom: 5px;
+         user-select: none;
+         transition: all 0.2s ease;
+         }
+      </div>
+   </div>
+   <pre class="tree-file-preview-out"></pre>
+   <div class="tree-context-menu">
+      <ul class="menu__options">
+         <li class="options__item" data-action="rename">Rename</li>
+         <li class="options__item" data-action="create">New <img src="img/caret-white.svg">
+            <ul class="dropdown">
+               <li class="dropdown__item" data-action="create-file">file</li>
+               <li class="dropdown__item" data-action="create-folder">folder</li>
+            </ul>
+         </li>
+         <li class="options__item" data-action="delete">Delete</li>
+      </ul>
+   </div>
+</body>
+
+</html>
